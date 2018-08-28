@@ -1,13 +1,12 @@
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
-from mycroft.util.log import LOG
+from mycroft.util.log import getLogger
 
 __author__ = 'minhmoc'
 
 LOGGER = getLogger(__name__)
 
 class EmotionSkill(MycroftSkill):
-
 	def __init__(self):
 		super(EmotionSkill, self).__init__(name="EmotionSkill")
 
