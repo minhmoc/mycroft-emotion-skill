@@ -10,18 +10,16 @@ class EmotionSkill(MycroftSkill):
 
     def __init__(self):
         super(EmotionSkill, self).__init__(name="EmotionSkill")
-        
-        self.count = 0
 
-    @intent_handler(IntentBuilder("").require("Extremely").require("Happy"))
+    @intent_handler(IntentBuilder("ExtremelyHappy").require("Extremely").require("Happy"))
     def handle_extremely_happy_intent(self, message):
         self.speak_dialog("extremely.happy")
 
-    @intent_handler(IntentBuilder("").require("Happy"))
+    @intent_handler(IntentBuilder("Happy").require("Happy"))
     def handle_happy_intent(self, message):
         self.speak_dialog("happy")
 
-    @intent_handler(IntentBuilder("").require("Sad"))
+    @intent_handler(IntentBuilder("Sad").require("Sad"))
     def handle_sad_intent(self, message):
         self.speak_dialog("sad")
 
